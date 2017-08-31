@@ -56,7 +56,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     break;
                 default:
                     db = new List<List<string>>();
-                    db.Add(new List<string>(new string[] { "a", "c" }));
+                    db.Add(new List<string>(new string[] {"c" }));
                     break;
             }
             return db;

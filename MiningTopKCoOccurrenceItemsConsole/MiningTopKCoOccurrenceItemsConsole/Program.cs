@@ -43,8 +43,13 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     case "nti":
                         runningTime = runningTime + algorithm.nti(db, p, k);
                         break;
+                    case "ntta":
+                        runningTime = runningTime + algorithm.ntta(db, p, k);
+                        break;
+                    case "ntita":
+                        runningTime = runningTime + algorithm.ntita(db, p, k);
+                        break;
                 }
-                algorithm.nt(db, p, k);
             }
             Console.WriteLine("Total Running time: {0}ms",runningTime);
             Console.ReadLine();
