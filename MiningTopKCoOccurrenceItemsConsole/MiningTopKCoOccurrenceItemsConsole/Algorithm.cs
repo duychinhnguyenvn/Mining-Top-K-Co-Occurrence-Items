@@ -206,6 +206,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
         public double pt(List<List<string>> db, List<string> p, int k)
         {
             double runningTime = 0;
+            PiTree ptr = new PiTree(db);
+            ptr.showTree();
             return runningTime;
         }
         public double ptta(List<List<string>> db, List<string> p, int k)

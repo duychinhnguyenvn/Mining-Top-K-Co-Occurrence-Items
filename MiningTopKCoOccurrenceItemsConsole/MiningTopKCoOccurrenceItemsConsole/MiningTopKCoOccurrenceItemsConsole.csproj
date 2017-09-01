@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="PiTree.cs" />
+    <Compile Include="PiTreeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
