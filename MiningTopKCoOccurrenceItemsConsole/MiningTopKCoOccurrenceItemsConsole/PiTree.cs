@@ -10,24 +10,25 @@ namespace MiningTopKCoOccurrenceItemsConsole
     {
         private Dictionary<string, List<PiTreeNode>> headerTable;
         private PiTreeNode root;
+        private Dictionary<string, int> CO;
         public PiTree(List<List<string>> db)
         {
             this.headerTable = new Dictionary<string, List<PiTreeNode>>();
             this.root = new PiTreeNode("Root");
             // Scan all database to get support count
-            Dictionary<string, int> CO = new Dictionary<string, int>();
+            CO = new Dictionary<string, int>();
+            CO[root.getLabel()] = db.Count;
             foreach(var tran in db)
             {
                 foreach(var i in tran)
                 {
                     if (!CO.ContainsKey(i))
                     {
-                        CO[i] = 1;
+                        CO[i] = 0;
                     }
-                    else
-                    {
-                        CO[i]++;
-                    }
+                    
+                    CO[i]++;
+                   
                 }
             }
             // Create header table
@@ -37,10 +38,12 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 headerTable[i.Key] = new List<PiTreeNode>();
             }
             // Build tree
+            //Console.WriteLine("Build pitree {0}",db.Count);
             foreach(var tran in db)
             {
+                List<string> copyTran = new List<string>(tran);
                 //sort tran
-                tran.Sort(delegate (string x, string y) {
+                copyTran.Sort(delegate (string x, string y) {
                     if (CO[x] < CO[y]) { return 1; }
                     else if (CO[x] == CO[y])
                     {
@@ -48,14 +51,17 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     }
                     else return -1;
                 });
-                if (tran.Count > 0)
+                if (copyTran.Count > 0)
                 {
-                    string i = tran[0];
-                    tran.Remove(i);
-                    insertTree(i, tran, root, headerTable);
+                    string i = copyTran[0];
+                    copyTran.Remove(i);
+                    insertTree(i, copyTran, root, headerTable);
                 }
             }
 
+        }
+        public Dictionary<string, int> getCoOccurrenceList() {
+            return this.CO;
         }
         public void showTree() {
             showTree(this.root);

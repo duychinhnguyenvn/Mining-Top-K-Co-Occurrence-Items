@@ -206,8 +206,88 @@ namespace MiningTopKCoOccurrenceItemsConsole
         public double pt(List<List<string>> db, List<string> p, int k)
         {
             double runningTime = 0;
+            
             PiTree ptr = new PiTree(db);
-            ptr.showTree();
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            Dictionary<string, List<PiTreeNode>> headerTable = ptr.getHeaderTable();
+            Dictionary<string, int> CO_Items = ptr.getCoOccurrenceList();
+            Dictionary<string, int> CO_Result = new Dictionary<string, int>();
+            // Sort the pattern
+            p.Sort(delegate (string x, string y) {
+                if (CO_Items[x] < CO_Items[y]) { return 1; }
+                else if (CO_Items[x] == CO_Items[y])
+                {
+                    return x.CompareTo(y);
+                }
+                else return -1;
+            });
+            //Console.WriteLine("Process pattern: {0}", string.Join(",", p));
+            int s = p.Count-1;
+            string i_s = p[s];
+            List<PiTreeNode> CNS = headerTable[i_s];
+            //Console.WriteLine("Total Nodes regiter {0}: {1}",i_s,CNS.Count);
+            List<PiTreeNode> NS = new List<PiTreeNode>();
+            foreach (var n in CNS) {
+                int x = s - 1;                
+                bool flag = false;
+                PiTreeNode currentNode = n.getParentNode();                
+                while (true)
+                {
+                    if (x < 0 || flag == true) break;
+                    string i_x = p[x];
+                    if (i_x.Equals(currentNode.getLabel())) {
+                        x--;
+                        currentNode = currentNode.getParentNode();
+                    }
+                    else
+                    {
+                        if (CO_Items[i_x] >= CO_Items[currentNode.getLabel()])
+                        {
+                            currentNode = currentNode.getParentNode();
+                        }
+                        else
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+                if (flag == false)
+                {
+                    NS.Add(n);
+                }
+            }
+            foreach (var n in NS) {
+                //scan up
+                //Console.WriteLine("Scan up!");
+                PiTreeNode up = n.getParentNode();
+                while (up != null && !up.getLabel().Equals("Root"))
+                {
+                    if (!p.Contains(up.getLabel()))
+                    {
+                        if (!CO_Result.ContainsKey(up.getLabel())) {
+                            CO_Result[up.getLabel()] = 0;
+                        }
+                        CO_Result[up.getLabel()] = CO_Result[up.getLabel()]+ n.getCount();
+                    }
+                    up = up.getParentNode();
+                }
+                //scan down
+                //Console.WriteLine("Scan down!");
+                foreach (var down in n.getChildrenNodes())
+                {
+                    Utils.travelDownSetCo(down, CO_Result);
+                }
+            }
+            // show result
+            var rTK = (from entry in CO_Result orderby entry.Value descending select entry).Take(k);
+            watch.Stop();
+            runningTime = watch.Elapsed.TotalMilliseconds;
+            // Display results.
+            foreach (KeyValuePair<string, int> pair in rTK)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+            Console.WriteLine("Time taken: {0}ms", runningTime);
             return runningTime;
         }
         public double ptta(List<List<string>> db, List<string> p, int k)

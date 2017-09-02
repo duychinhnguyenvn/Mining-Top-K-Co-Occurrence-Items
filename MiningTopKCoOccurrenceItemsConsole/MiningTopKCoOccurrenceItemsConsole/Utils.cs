@@ -56,10 +56,24 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     break;
                 default:
                     db = new List<List<string>>();
-                    db.Add(new List<string>(new string[] {"c" }));
+                    db.Add(new List<string>(new string[] {"a","c" }));
                     break;
             }
             return db;
+        }
+        public static void travelDownSetCo(PiTreeNode childrenNode,Dictionary<string,int> CO)
+        {
+            if (!CO.ContainsKey(childrenNode.getLabel())) {
+                CO[childrenNode.getLabel()] = childrenNode.getCount();
+            }
+            else
+            {
+                CO[childrenNode.getLabel()] = CO[childrenNode.getLabel()] + childrenNode.getCount();
+            }            
+            foreach (var n in childrenNode.getChildrenNodes())
+            {
+                travelDownSetCo(n, CO);
+            }
         }
         public static bool IsSubSetOf(List<string> a, List<string> b)
         {
