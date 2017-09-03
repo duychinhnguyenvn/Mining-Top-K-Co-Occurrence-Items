@@ -55,6 +55,12 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     case "bt":
                         runningTime = runningTime + algorithm.bt(db, p, k);
                         break;
+                    case "bti":
+                        runningTime = runningTime + algorithm.bti(db, p, k);
+                        break;
+                    case "btiv":
+                        runningTime = runningTime + algorithm.btiv(db, p, k);
+                        break;
                 }
             }
             Console.WriteLine("Total Running time: {0}ms",runningTime);

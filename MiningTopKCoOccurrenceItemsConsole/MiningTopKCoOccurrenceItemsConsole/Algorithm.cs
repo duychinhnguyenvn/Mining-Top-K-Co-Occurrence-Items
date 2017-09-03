@@ -299,8 +299,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
         public double bt(List<List<string>> db, List<string> p, int k)
         {
             double runningTime = 0;
-            List<List<string>> dbp = getDBP(db, p);
-            BitTable bitTable = new BitTable(dbp);
+            BitTable bitTable = new BitTable(db);
             string[] headerColumns = bitTable.getHeaderColumns();
             //bitTable.showBitTable();
             //Console.WriteLine("Pattern: {0}",string.Join(",",p));
@@ -339,6 +338,46 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 CO_result[headerColumns[item.Key]] = item.Value;
             }
             var rTK = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
+            watch.Stop();
+            runningTime = watch.Elapsed.TotalMilliseconds;
+            // Display results.
+            foreach (KeyValuePair<string, int> pair in rTK)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+            Console.WriteLine("Time taken: {0}ms", runningTime);
+            return runningTime;
+        }
+        public double bti(List<List<string>> db, List<string> p, int k)
+        {
+            double runningTime = 0;
+            List<List<string>> dbp = getDBP(db, p);
+            Algorithm algorithm = new Algorithm();
+            runningTime = algorithm.bt(dbp,p,k);
+            return runningTime;
+        }
+        public double btiv(List<List<string>> db, List<string> p, int k)
+        {
+            double runningTime = 0;
+            List<List<string>> dbp = getDBP(db, p);
+            //build bittable h
+            BitTableVertical bitTable = new BitTableVertical(dbp);
+            //bitTable.show();
+            Dictionary<string, BitArray> data = bitTable.getData();
+            //remove item in pattern
+            foreach(var item in p)
+            {
+                data.Remove(item);
+            }
+            //calculate CO
+            Dictionary<string, int> CO = new Dictionary<string, int>();
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            foreach (var item in data)
+            {
+                CO[item.Key] = Utils.GetCardinality(item.Value);
+            }
+            
+            var rTK = (from entry in CO orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             runningTime = watch.Elapsed.TotalMilliseconds;
             // Display results.

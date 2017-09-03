@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
     <Compile Include="BitTable.cs" />
+    <Compile Include="BitTableVertical.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="PiTree.cs" />
     <Compile Include="PiTreeNode.cs" />
