@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -295,6 +296,58 @@ namespace MiningTopKCoOccurrenceItemsConsole
             double runningTime = 0;
             return runningTime;
         }
-        
+        public double bt(List<List<string>> db, List<string> p, int k)
+        {
+            double runningTime = 0;
+            List<List<string>> dbp = getDBP(db, p);
+            BitTable bitTable = new BitTable(dbp);
+            string[] headerColumns = bitTable.getHeaderColumns();
+            //bitTable.showBitTable();
+            //Console.WriteLine("Pattern: {0}",string.Join(",",p));
+            Dictionary<int, int> CO = new Dictionary<int, int>();
+            System.Collections.BitArray bitPattern = bitTable.getBitArrayPattern(p);
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            foreach (var tran in bitTable.getData())
+            {
+                //check P is subset of tran
+                bool isSubset = true;
+                BitArray tempTran = new BitArray(tran);
+                BitArray andPattern = tempTran.And(bitPattern);
+                for (int i=0; i<tran.Length;i++)
+                {
+                    if (andPattern[i] != bitPattern[i])
+                    {
+                        isSubset = false;
+                        break;
+                    }
+                }
+                if (isSubset)
+                {
+                    for(int i = 0; i < tran.Length; i++)
+                    {
+                        if (tran[i]&&!bitPattern[i])
+                        {
+                            if (!CO.ContainsKey(i)) CO[i] = 0;
+                            CO[i]++;
+                        }
+                    }
+                }
+            }
+            Dictionary<string, int> CO_result = new Dictionary<string, int>();
+            foreach(var item in CO)
+            {
+                CO_result[headerColumns[item.Key]] = item.Value;
+            }
+            var rTK = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
+            watch.Stop();
+            runningTime = watch.Elapsed.TotalMilliseconds;
+            // Display results.
+            foreach (KeyValuePair<string, int> pair in rTK)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+            Console.WriteLine("Time taken: {0}ms", runningTime);
+            return runningTime;
+        }
     }
 }
