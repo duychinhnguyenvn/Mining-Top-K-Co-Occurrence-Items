@@ -129,7 +129,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             }
 
             return count;
-
+    
         }
         public static Int32 GetCountBitArray(BitArray bitArray)
         {

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
+    <Compile Include="AlgorithmResult.cs" />
     <Compile Include="BitTable.cs" />
     <Compile Include="BitTableVertical.cs" />
     <Compile Include="Database.cs" />

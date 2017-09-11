@@ -52,9 +52,10 @@ namespace MiningTopKCoOccurrenceItemsConsole
             //}
             return dbp;
         }
-        public double nt(List<List<string>> db,List<string> p,int k)
+        public AlgorithmResult nt(List<List<string>> db,List<string> p,int k)
         {
             Dictionary<string, int> co = new Dictionary<string, int>();
+            double runningTime = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
             foreach (var t in db)
             {
@@ -73,22 +74,22 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     }
                 }
             }
-            var rTK = (from entry in co orderby entry.Value descending select entry).Take(k);
+            var lk = (from entry in co orderby entry.Value descending select entry).Take(k);
             watch.Stop();
-            var elapsedMs = watch.Elapsed.TotalMilliseconds;
-            // Display results.
-            foreach (KeyValuePair<string, int> pair in rTK)
-            {
-                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            }
-            Console.WriteLine("Time taken: {0}ms", elapsedMs);
-            return elapsedMs;
+            runningTime = watch.Elapsed.TotalMilliseconds;            
+            return new AlgorithmResult((int)runningTime,0,0,lk);
         }
-        public double nti(List<List<string>> db, List<string> p, int k) {
-            List < List < string >> db_p = getDBP(db, p);
-            // Re run NT
+        public AlgorithmResult nti(List<List<string>> db, List<string> p, int k) {
+            //build Tid-set
+            double timeToBuildTidSet = 0;
+            double processingTime = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            
+            List < List < string >> db_p = getDBP(db, p);
+            watch.Stop();
+            timeToBuildTidSet = watch.Elapsed.TotalMilliseconds;
+            // Re run NT
+            watch.Reset();
+            watch = System.Diagnostics.Stopwatch.StartNew();
             Dictionary<string, int> co = new Dictionary<string, int>();
             foreach (var t in db_p)
             {
@@ -105,23 +106,15 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     }
                 }
             }
-            Console.WriteLine("Rtk result:");
-            var rTK = (from entry in co orderby entry.Value descending select entry).Take(k);
-            
+            var lk = (from entry in co orderby entry.Value descending select entry).Take(k);            
             watch.Stop();
-            var elapsedMs = watch.Elapsed.TotalMilliseconds;
+            processingTime = watch.Elapsed.TotalMilliseconds;
             
-            // Display results.
-            foreach (KeyValuePair<string, int> pair in rTK)
-            {
-                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            }
-            Console.WriteLine("Time taken: {0}ms", elapsedMs);
-            return elapsedMs;
+            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildTidSet,lk);
         }
-        public double ntta(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult ntta(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
+            double processingTime = 0;
             List<string> IC = new List<string>();
             List<string> LK = new List<string>();
             int MINV_lsk = 0;
@@ -187,29 +180,37 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 }
             }
             watch.Stop();
-            runningTime = watch.Elapsed.TotalMilliseconds;
-            //Show LK
+            processingTime = watch.Elapsed.TotalMilliseconds;
+            var lk = new Dictionary<string,int>();
+            //Build result
             foreach (var item in LK)
             {
-                Console.WriteLine("{0}:{1}",item,CO[item]);
+                lk[item] = CO[item];
             }
-            Console.WriteLine("Time taken: {0}ms", runningTime);
-            return runningTime;
+            return new AlgorithmResult((int)processingTime,0,0,lk);
         }
-        public double ntita(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult ntita(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
-            List<List<string>> dbp = getDBP(db, p);
-            Algorithm algorithm = new Algorithm();
-            runningTime = algorithm.ntta(dbp, p, k);
-            return runningTime;
-        }
-        public double pt(List<List<string>> db, List<string> p, int k)
-        {
-            double runningTime = 0;
-            
-            PiTree ptr = new PiTree(db);
+            double processingTime = 0;
+            double timeToBuildTidSet = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
+            List<List<string>> dbp = getDBP(db, p);
+            watch.Stop();
+            timeToBuildTidSet = watch.Elapsed.TotalMilliseconds;
+            Algorithm algorithm = new Algorithm();
+            var result = algorithm.ntta(dbp, p, k);
+            processingTime = result.getRunningTime();
+            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildTidSet,result.getListTopK());
+        }
+        public AlgorithmResult pt(List<List<string>> db, List<string> p, int k)
+        {
+            double procesingTime = 0;
+            double timeToBuildPiTree = 0;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            PiTree ptr = new PiTree(db);
+            watch.Stop();
+            timeToBuildPiTree = watch.Elapsed.TotalMilliseconds;
+            watch = System.Diagnostics.Stopwatch.StartNew();
             Dictionary<string, List<PiTreeNode>> headerTable = ptr.getHeaderTable();
             Dictionary<string, int> CO_Items = ptr.getCoOccurrenceList();
             Dictionary<string, int> CO_Result = new Dictionary<string, int>();
@@ -280,32 +281,31 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 }
             }
             // show result
-            var rTK = (from entry in CO_Result orderby entry.Value descending select entry).Take(k);
+            var lk = (from entry in CO_Result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
-            runningTime = watch.Elapsed.TotalMilliseconds;
-            // Display results.
-            foreach (KeyValuePair<string, int> pair in rTK)
-            {
-                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            }
-            Console.WriteLine("Time taken: {0}ms", runningTime);
-            return runningTime;
+            procesingTime = watch.Elapsed.TotalMilliseconds;
+            return new AlgorithmResult((int)procesingTime,0,(int)timeToBuildPiTree,lk);
         }
-        public double ptta(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult ptta(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
-            return runningTime;
+            double processingTime = 0;
+            return new AlgorithmResult((int)processingTime,0,0,new Dictionary<string,int>());
         }
-        public double bt(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult bt(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
+            double processingTime = 0;
+            double timeToBuildBitTable = 0;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             BitTable bitTable = new BitTable(db);
+            watch.Stop();
+            timeToBuildBitTable = watch.Elapsed.TotalMilliseconds;
+            watch.Reset();
             string[] headerColumns = bitTable.getHeaderColumns();
             //bitTable.showBitTable();
             //Console.WriteLine("Pattern: {0}",string.Join(",",p));
             Dictionary<int, int> CO = new Dictionary<int, int>();
             System.Collections.BitArray bitPattern = bitTable.getBitArrayPattern(p);
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            watch = System.Diagnostics.Stopwatch.StartNew();
             foreach (var tran in bitTable.getData())
             {
                 //check P is subset of tran
@@ -337,31 +337,34 @@ namespace MiningTopKCoOccurrenceItemsConsole
             {
                 CO_result[headerColumns[item.Key]] = item.Value;
             }
-            var rTK = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
+            var lk = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
-            runningTime = watch.Elapsed.TotalMilliseconds;
-            // Display results.
-            foreach (KeyValuePair<string, int> pair in rTK)
-            {
-                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            }
-            Console.WriteLine("Time taken: {0}ms", runningTime);
-            return runningTime;
+            processingTime = watch.Elapsed.TotalMilliseconds;
+            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildBitTable,lk);
         }
-        public double bti(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult bti(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
+            double processingTime = 0;
+            double timeToBuildTidSet = 0;
+            double timeToBuildBitTable = 0;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             List<List<string>> dbp = getDBP(db, p);
+            watch.Stop();
+            timeToBuildTidSet = watch.Elapsed.TotalMilliseconds;
             Algorithm algorithm = new Algorithm();
-            runningTime = algorithm.bt(dbp,p,k);
-            return runningTime;
+            var algorithmResult = algorithm.bt(dbp,p,k);
+            processingTime = algorithmResult.getRunningTime();
+            timeToBuildBitTable = algorithmResult.getTimeToBuildDatbase();
+            return new AlgorithmResult((int)processingTime,0,(int)(timeToBuildTidSet+timeToBuildBitTable),algorithmResult.getListTopK());
         }
-        public double btiv(List<List<string>> db, List<string> p, int k)
+        public AlgorithmResult btiv(List<List<string>> db, List<string> p, int k)
         {
-            double runningTime = 0;
+            double processingTime = 0;
+            double timeToBuildBitTable = 0;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             List<List<string>> dbp = getDBP(db, p);
             //build bittable h
-            BitTableVertical bitTable = new BitTableVertical(dbp);
+            BitTableVertical bitTable = new BitTableVertical(dbp);            
             //bitTable.show();
             Dictionary<string, BitArray> data = bitTable.getData();
             //remove item in pattern
@@ -369,24 +372,21 @@ namespace MiningTopKCoOccurrenceItemsConsole
             {
                 data.Remove(item);
             }
+            watch.Stop();
+            timeToBuildBitTable = watch.Elapsed.TotalMilliseconds;
+            watch.Reset();
             //calculate CO
             Dictionary<string, int> CO = new Dictionary<string, int>();
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            watch = System.Diagnostics.Stopwatch.StartNew();
             foreach (var item in data)
             {
                 CO[item.Key] = Utils.GetCardinality(item.Value);
             }
             
-            var rTK = (from entry in CO orderby entry.Value descending select entry).Take(k);
+            var lk = (from entry in CO orderby entry.Value descending select entry).Take(k);
             watch.Stop();
-            runningTime = watch.Elapsed.TotalMilliseconds;
-            // Display results.
-            foreach (KeyValuePair<string, int> pair in rTK)
-            {
-                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            }
-            Console.WriteLine("Time taken: {0}ms", runningTime);
-            return runningTime;
+            processingTime = watch.Elapsed.TotalMilliseconds;
+            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildBitTable,lk);
         }
     }
 }
