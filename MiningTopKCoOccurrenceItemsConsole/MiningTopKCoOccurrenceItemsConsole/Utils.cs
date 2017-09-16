@@ -11,7 +11,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
     class Utils
     {
         public static string ROOTFOLDER = "E:\\Cao hoc\\Codes\\Mining-Top-K-Co-Occurrence-Items\\MiningTopKCoOccurrenceItemsConsole\\";
-        public static List<List<string>> getRandomPatternList(List<List<string>> db, int length)
+        public static List<List<string>> getRandomPatternList(string[][] db, int length)
         {
             List<List<string>> randomList = new List<List<string>>();
             Random rnd = new Random();
@@ -19,14 +19,14 @@ namespace MiningTopKCoOccurrenceItemsConsole
             int index;
             for (int i=0;i<100;i++)
             {
-                n = rnd.Next(db.Count-1);
-                List<string> rdTran = db[n];
+                n = rnd.Next(db.Length-1);
+                string[] rdTran = db[n];
                 List<string> patternList = new List<string>();
                 for (int j=0;j<length;j++)
                 {
-                    index = rnd.Next(rdTran.Count - length - 1);
+                    index = rnd.Next(rdTran.Length - length - 1);
                     patternList.Add(rdTran[index]);
-                    rdTran.RemoveAt(index);
+                    rdTran = rdTran.Except(new string[] { rdTran[index] }).ToArray();
                 }
                 
                 randomList.Add(patternList);
@@ -35,7 +35,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
         }
         public static void genQueryItemsetsToFile(string dbName, int length)
         {
-            List<List<string>> db = Database.getDatabase(dbName);
+            string[][] db = Database.getDatabase(dbName);
             List<List<string>> randomList = getRandomPatternList(db, length);
             StreamWriter file = new StreamWriter(ROOTFOLDER+dbName+"_"+length+".txt");
             foreach (var item in randomList)
@@ -139,6 +139,20 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 if (i) count++;
             }
             return count;
+        }
+        public static int CountLines(string filename)
+        {
+            int result = 0;
+
+            using (var input = File.OpenText(filename))
+            {
+                while (input.ReadLine() != null)
+                {
+                    ++result;
+                }
+            }
+
+            return result;
         }
 
     }

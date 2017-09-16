@@ -10,16 +10,15 @@ namespace MiningTopKCoOccurrenceItemsConsole
     {
         static void Main(string[] args)
         {
-            List<List<string>> db;
+            string[][] db;
             List<List<string>> randomPatternList;
             int k;
             string algorithmName;
-            double runningTime = 0;
             // Load database
             Console.Write("Database: ");
             string dbName=Console.ReadLine().Trim().ToLower();
             db = Database.getDatabase(dbName);
-            Console.WriteLine("Total rows: {0}",db.Count);            
+            Console.WriteLine("Total rows: {0}",db.Length);            
             // Generate random queries
             Console.Write("Query length: ");
             int queryLength = int.Parse(Console.ReadLine());
@@ -43,38 +42,38 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 if (algorithmName.Equals("nt"))
                 {
                     Console.WriteLine("{0}. {1}",i,string.Join(",",p));
-                    AlgorithmResult result = algorithm.nt(db, p, k);
-                    listTestResults.Add(result);                   
+                    //AlgorithmResult result = algorithm.nt(db, p, k);
+                    //listTestResults.Add(result);                   
                 }
                 else if (algorithmName.Equals("nti"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
-                    AlgorithmResult result = algorithm.nti(db, p, k);
-                    listTestResults.Add(result);
+                    //AlgorithmResult result = algorithm.nti(db, p, k);
+                    //listTestResults.Add(result);
                 }
                 else if (algorithmName.Equals("ntta"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
-                    AlgorithmResult result = algorithm.ntta(db, p, k);
-                    listTestResults.Add(result);
+                    //AlgorithmResult result = algorithm.ntta(db, p, k);
+                    //listTestResults.Add(result);
                 }
                 else if (algorithmName.Equals("ntita"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
-                    AlgorithmResult result = algorithm.ntita(db, p, k);
-                    listTestResults.Add(result);
+                    //AlgorithmResult result = algorithm.ntita(db, p, k);
+                    //listTestResults.Add(result);
                 }
                 else if (algorithmName.Equals("pt"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
-                    AlgorithmResult result = algorithm.pt(db, p, k);
-                    listTestResults.Add(result);
+                    //AlgorithmResult result = algorithm.pt(db, p, k);
+                    //listTestResults.Add(result);
                 }
                 else if (algorithmName.Equals("btiv"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
-                    AlgorithmResult result = algorithm.btiv(db, p, k);
-                    listTestResults.Add(result);
+                    //AlgorithmResult result = algorithm.btiv(db, p, k);
+                    //listTestResults.Add(result);
                 }
             }
             // write result to file
