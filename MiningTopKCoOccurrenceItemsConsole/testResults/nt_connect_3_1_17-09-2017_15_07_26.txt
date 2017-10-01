@@ -1,0 +1,15 @@
+--------------------
+10:26521
+Time to build data: 0ms
+Time to processing: 322ms
+--------------------
+10:5348
+Time to build data: 0ms
+Time to processing: 91ms
+--------------------
+31:50848
+Time to build data: 0ms
+Time to processing: 624ms
+===========================================
+Avg time to build Pitree or Bittable: 0ms
+Total Running time: 1037ms

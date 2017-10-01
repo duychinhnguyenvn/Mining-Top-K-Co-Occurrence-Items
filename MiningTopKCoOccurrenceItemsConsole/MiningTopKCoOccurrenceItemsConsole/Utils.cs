@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
+using Microsoft.Office.Interop;
+using Microsoft.Office.Interop.Excel;
 
 namespace MiningTopKCoOccurrenceItemsConsole
 {
@@ -139,6 +141,105 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 if (i) count++;
             }
             return count;
+        }
+        public static void WriteTestResult(string dbName,string algorithmName,int k, int queryLength, int totalProcessingTime,int avgPreprocessingTime,int avgPreprocessingMemUsage)
+        {
+            string RunningTimepath = Utils.ROOTFOLDER + "testResults\\RunningTimeResult.xlsx";
+            string PreprocessingTimepath = Utils.ROOTFOLDER + "testResults\\PreprocessingTimeResult.xlsx";
+            string PreprocessingMemUsage = Utils.ROOTFOLDER + "testResults\\PreprocessingMemUsage.xlsx";
+            string[] cols = new string[] {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","aa","ab","ac","ad","ae","af","ag","ah","ai","aj","ak","al","am","an","ao","ap","aq" };
+            Dictionary<int, string[]> kLoc = new Dictionary<int, string[]>();
+            kLoc[1] = new string[] { "b","3"};
+            kLoc[5] = new string[] { "m", "3" };
+            kLoc[10] = new string[] { "x", "3" };
+            kLoc[15] = new string[] { "ai", "3" };
+            // get location
+            Dictionary<string, int> algorimPlus = new Dictionary<string, int>();
+            algorimPlus["nt"] = 0;
+            algorimPlus["nti"] = 1;
+            algorimPlus["ntta"] = 2;
+            algorimPlus["ntita"] = 3;
+            algorimPlus["pt"] = 4;
+            algorimPlus["ptta"] = 5;
+            algorimPlus["bt"] = 6;
+            algorimPlus["bti"] = 7;
+            algorimPlus["btiv"] = 8;
+            int col = Array.FindIndex(cols,item => item.Equals(kLoc[k][0]))+algorimPlus[algorithmName]+1;
+            int row = queryLength;
+            Console.WriteLine("Write test result {0}:{1}",row,col);
+            // Write running time result
+            Application excel = new Application();
+            Workbook workbook = excel.Workbooks.Open(RunningTimepath, ReadOnly: false, Editable: true);
+            Worksheet worksheet;
+            foreach (Worksheet item in workbook.Worksheets)
+            {
+                if (item.Name.Equals("connect") && dbName.Equals("connect"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = totalProcessingTime;
+                    break;
+                }else
+                    if (item.Name.Equals("accidents") && dbName.Equals("accidents"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = totalProcessingTime;
+                    break;
+                }
+            }
+            excel.Application.ActiveWorkbook.Save();
+            excel.Application.Quit();
+            excel.Quit();
+
+            // Write preprocessing time result
+            excel = new Application();
+            workbook = excel.Workbooks.Open(PreprocessingTimepath, ReadOnly: false, Editable: true);            
+            foreach (Worksheet item in workbook.Worksheets)
+            {
+                if (item.Name.Equals("connect") && dbName.Equals("connect"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = avgPreprocessingTime;
+                    break;
+                }
+                else
+                    if (item.Name.Equals("accidents") && dbName.Equals("accidents"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = avgPreprocessingTime;
+                    break;
+                }
+            }
+            excel.Application.ActiveWorkbook.Save();
+            excel.Application.Quit();
+            excel.Quit();
+            // Write preprocessing mem usage
+            excel = new Application();
+            workbook = excel.Workbooks.Open(PreprocessingMemUsage, ReadOnly: false, Editable: true);
+            foreach (Worksheet item in workbook.Worksheets)
+            {
+                if (item.Name.Equals("connect") && dbName.Equals("connect"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = avgPreprocessingMemUsage;
+                    break;
+                }
+                else
+                    if (item.Name.Equals("accidents") && dbName.Equals("accidents"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = avgPreprocessingMemUsage;
+                    break;
+                }
+            }
+            excel.Application.ActiveWorkbook.Save();
+            excel.Application.Quit();
+            excel.Quit();
         }
 
     }

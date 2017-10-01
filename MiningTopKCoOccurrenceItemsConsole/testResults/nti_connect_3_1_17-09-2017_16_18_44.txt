@@ -1,0 +1,403 @@
+--------------------
+10:26521
+Time to build data: 531ms
+Time to processing: 278ms
+--------------------
+10:5348
+Time to build data: 435ms
+Time to processing: 52ms
+--------------------
+31:50848
+Time to build data: 502ms
+Time to processing: 525ms
+--------------------
+16:1094
+Time to build data: 391ms
+Time to processing: 10ms
+--------------------
+10:3847
+Time to build data: 483ms
+Time to processing: 43ms
+--------------------
+7:1215
+Time to build data: 369ms
+Time to processing: 12ms
+--------------------
+7:6950
+Time to build data: 469ms
+Time to processing: 67ms
+--------------------
+55:23989
+Time to build data: 391ms
+Time to processing: 243ms
+--------------------
+55:62425
+Time to build data: 474ms
+Time to processing: 653ms
+--------------------
+66:46849
+Time to build data: 381ms
+Time to processing: 509ms
+--------------------
+13:44060
+Time to build data: 408ms
+Time to processing: 456ms
+--------------------
+10:6926
+Time to build data: 457ms
+Time to processing: 71ms
+--------------------
+66:18544
+Time to build data: 388ms
+Time to processing: 194ms
+--------------------
+37:6275
+Time to build data: 379ms
+Time to processing: 91ms
+--------------------
+115:10404
+Time to build data: 387ms
+Time to processing: 104ms
+--------------------
+63:28453
+Time to build data: 405ms
+Time to processing: 336ms
+--------------------
+37:2955
+Time to build data: 372ms
+Time to processing: 28ms
+--------------------
+91:29275
+Time to build data: 400ms
+Time to processing: 350ms
+--------------------
+91:4326
+Time to build data: 392ms
+Time to processing: 48ms
+--------------------
+52:60411
+Time to build data: 410ms
+Time to processing: 668ms
+--------------------
+31:27070
+Time to build data: 395ms
+Time to processing: 290ms
+--------------------
+13:13797
+Time to build data: 398ms
+Time to processing: 147ms
+--------------------
+34:12730
+Time to build data: 447ms
+Time to processing: 139ms
+--------------------
+37:18462
+Time to build data: 406ms
+Time to processing: 191ms
+--------------------
+75:7752
+Time to build data: 460ms
+Time to processing: 89ms
+--------------------
+16:9216
+Time to build data: 369ms
+Time to processing: 108ms
+--------------------
+55:17440
+Time to build data: 472ms
+Time to processing: 188ms
+--------------------
+34:54264
+Time to build data: 401ms
+Time to processing: 597ms
+--------------------
+16:502
+Time to build data: 464ms
+Time to processing: 4ms
+--------------------
+19:42849
+Time to build data: 385ms
+Time to processing: 465ms
+--------------------
+28:13938
+Time to build data: 478ms
+Time to processing: 136ms
+--------------------
+37:3227
+Time to build data: 380ms
+Time to processing: 46ms
+--------------------
+52:25543
+Time to build data: 468ms
+Time to processing: 262ms
+--------------------
+52:17536
+Time to build data: 414ms
+Time to processing: 188ms
+--------------------
+91:64542
+Time to build data: 504ms
+Time to processing: 673ms
+--------------------
+106:19770
+Time to build data: 407ms
+Time to processing: 223ms
+--------------------
+16:18121
+Time to build data: 475ms
+Time to processing: 189ms
+--------------------
+34:54091
+Time to build data: 387ms
+Time to processing: 581ms
+--------------------
+103:18550
+Time to build data: 471ms
+Time to processing: 191ms
+--------------------
+91:8712
+Time to build data: 394ms
+Time to processing: 99ms
+--------------------
+28:33398
+Time to build data: 472ms
+Time to processing: 341ms
+--------------------
+97:33791
+Time to build data: 394ms
+Time to processing: 354ms
+--------------------
+88:12635
+Time to build data: 469ms
+Time to processing: 130ms
+--------------------
+37:1687
+Time to build data: 412ms
+Time to processing: 22ms
+--------------------
+100:15671
+Time to build data: 495ms
+Time to processing: 167ms
+--------------------
+37:62702
+Time to build data: 397ms
+Time to processing: 649ms
+--------------------
+25:3037
+Time to build data: 462ms
+Time to processing: 34ms
+--------------------
+19:3042
+Time to build data: 381ms
+Time to processing: 49ms
+--------------------
+75:10427
+Time to build data: 476ms
+Time to processing: 106ms
+--------------------
+31:9227
+Time to build data: 372ms
+Time to processing: 100ms
+--------------------
+10:257
+Time to build data: 480ms
+Time to processing: 2ms
+--------------------
+13:514
+Time to build data: 377ms
+Time to processing: 4ms
+--------------------
+19:3062
+Time to build data: 407ms
+Time to processing: 42ms
+--------------------
+16:903
+Time to build data: 526ms
+Time to processing: 9ms
+--------------------
+55:9987
+Time to build data: 406ms
+Time to processing: 101ms
+--------------------
+91:7043
+Time to build data: 497ms
+Time to processing: 69ms
+--------------------
+72:13069
+Time to build data: 413ms
+Time to processing: 147ms
+--------------------
+19:56579
+Time to build data: 495ms
+Time to processing: 584ms
+--------------------
+75:2303
+Time to build data: 392ms
+Time to processing: 22ms
+--------------------
+109:12132
+Time to build data: 483ms
+Time to processing: 125ms
+--------------------
+7:7962
+Time to build data: 398ms
+Time to processing: 86ms
+--------------------
+75:15622
+Time to build data: 391ms
+Time to processing: 185ms
+--------------------
+13:12878
+Time to build data: 382ms
+Time to processing: 138ms
+--------------------
+72:62358
+Time to build data: 407ms
+Time to processing: 708ms
+--------------------
+97:4499
+Time to build data: 379ms
+Time to processing: 57ms
+--------------------
+10:39036
+Time to build data: 384ms
+Time to processing: 403ms
+--------------------
+49:51409
+Time to build data: 458ms
+Time to processing: 554ms
+--------------------
+75:60836
+Time to build data: 380ms
+Time to processing: 657ms
+--------------------
+46:14338
+Time to build data: 465ms
+Time to processing: 152ms
+--------------------
+19:3980
+Time to build data: 387ms
+Time to processing: 41ms
+--------------------
+16:1055
+Time to build data: 478ms
+Time to processing: 10ms
+--------------------
+25:20803
+Time to build data: 391ms
+Time to processing: 229ms
+--------------------
+55:62341
+Time to build data: 507ms
+Time to processing: 641ms
+--------------------
+97:21830
+Time to build data: 383ms
+Time to processing: 249ms
+--------------------
+52:36231
+Time to build data: 470ms
+Time to processing: 370ms
+--------------------
+72:5672
+Time to build data: 378ms
+Time to processing: 56ms
+--------------------
+66:4003
+Time to build data: 492ms
+Time to processing: 39ms
+--------------------
+34:3090
+Time to build data: 373ms
+Time to processing: 30ms
+--------------------
+34:6312
+Time to build data: 472ms
+Time to processing: 76ms
+--------------------
+52:9273
+Time to build data: 390ms
+Time to processing: 93ms
+--------------------
+19:7078
+Time to build data: 472ms
+Time to processing: 82ms
+--------------------
+55:21730
+Time to build data: 406ms
+Time to processing: 220ms
+--------------------
+16:32530
+Time to build data: 469ms
+Time to processing: 337ms
+--------------------
+49:52174
+Time to build data: 403ms
+Time to processing: 530ms
+--------------------
+75:64786
+Time to build data: 485ms
+Time to processing: 673ms
+--------------------
+31:35779
+Time to build data: 387ms
+Time to processing: 369ms
+--------------------
+25:14802
+Time to build data: 488ms
+Time to processing: 154ms
+--------------------
+72:43580
+Time to build data: 387ms
+Time to processing: 460ms
+--------------------
+75:62808
+Time to build data: 519ms
+Time to processing: 640ms
+--------------------
+49:25832
+Time to build data: 399ms
+Time to processing: 258ms
+--------------------
+55:13186
+Time to build data: 475ms
+Time to processing: 137ms
+--------------------
+46:9663
+Time to build data: 377ms
+Time to processing: 106ms
+--------------------
+19:30400
+Time to build data: 484ms
+Time to processing: 313ms
+--------------------
+66:44385
+Time to build data: 387ms
+Time to processing: 476ms
+--------------------
+103:14864
+Time to build data: 462ms
+Time to processing: 156ms
+--------------------
+31:45516
+Time to build data: 383ms
+Time to processing: 514ms
+--------------------
+16:56009
+Time to build data: 395ms
+Time to processing: 615ms
+--------------------
+19:10439
+Time to build data: 388ms
+Time to processing: 111ms
+--------------------
+19:14784
+Time to build data: 368ms
+Time to processing: 162ms
+--------------------
+28:40686
+Time to build data: 461ms
+Time to processing: 442ms
+===========================================
+Avg time to build Pitree or Bittable: 427ms
+Total Running time: 24130ms

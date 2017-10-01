@@ -10,41 +10,49 @@ namespace MiningTopKCoOccurrenceItemsConsole
     {
         static void Main(string[] args)
         {
-            List<List<string>> db;
-            List<List<string>> randomPatternList;
-            int k;
+            List<List<string>> db;            
+            //int[] listk=new int[] { 1,5,10,15};
+            //int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
+            int[] listk = new int[] { 10 };
+            int[] listQueryLength = new int[] { 3};
             string algorithmName;
-            double runningTime = 0;
             // Load database
             Console.Write("Database: ");
             string dbName=Console.ReadLine().Trim().ToLower();
             db = Database.getDatabase(dbName);
             Console.WriteLine("Total rows: {0}",db.Count);            
-            // Generate random queries
-            Console.Write("Query length: ");
-            int queryLength = int.Parse(Console.ReadLine());
             // Generate test queries
-            //Utils.genQueryItemsetsToFile(dbName, queryLength);
-            randomPatternList = Utils.loadQueryItemsets(dbName,queryLength);
-            // Get top k input
-            Console.Write("Top-k: ");
-            k = int.Parse(Console.ReadLine());
+            //Utils.genQueryItemsetsToFile(dbName, queryLength);                    
             // Algo
             Console.Write("Algorithm: ");
             algorithmName = Console.ReadLine();
+            foreach(var k in listk)
+            {
+                foreach(var length in listQueryLength)
+                {
+                    runAlgorithm(k, length, algorithmName, dbName, db);
+                }
+            }
+
+            
+            Console.ReadLine();
+        }
+        private static void runAlgorithm(int k, int queryLength, string algorithmName,string dbName,List<List<string>> db)
+        {
+            List<List<string>> randomPatternList = Utils.loadQueryItemsets(dbName, queryLength);
             Algorithm algorithm = new Algorithm();
             List<AlgorithmResult> listTestResults = new List<AlgorithmResult>();
-            string outPutFileName = Utils.ROOTFOLDER + "testResults\\"+algorithmName+"_"+dbName+"_"+queryLength+"_"+k+"_"+ System.DateTime.Now.ToString("dd-MM-yyyy_HH_mm_ss")+".txt";
-            System.IO.StreamWriter fileOutput= new System.IO.StreamWriter(outPutFileName);
+            string outPutFileName = Utils.ROOTFOLDER + "testResults\\" + algorithmName + "_" + dbName + "_" + queryLength + "_" + k + "_" + System.DateTime.Now.ToString("dd-MM-yyyy_HH_mm_ss") + ".txt";
+            System.IO.StreamWriter fileOutput = new System.IO.StreamWriter(outPutFileName);
             int i = 0;
             foreach (var p in randomPatternList)
             {
                 i++;
                 if (algorithmName.Equals("nt"))
                 {
-                    Console.WriteLine("{0}. {1}",i,string.Join(",",p));
+                    Console.WriteLine("{0}. {1}", i, string.Join(",", p));
                     AlgorithmResult result = algorithm.nt(db, p, k);
-                    listTestResults.Add(result);                   
+                    listTestResults.Add(result);
                 }
                 else if (algorithmName.Equals("nti"))
                 {
@@ -70,6 +78,18 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     AlgorithmResult result = algorithm.pt(db, p, k);
                     listTestResults.Add(result);
                 }
+                else if (algorithmName.Equals("bt"))
+                {
+                    Console.WriteLine("{0}. {1}", i, string.Join(",", p));
+                    AlgorithmResult result = algorithm.bt(db, p, k);
+                    listTestResults.Add(result);
+                }
+                else if (algorithmName.Equals("bti"))
+                {
+                    Console.WriteLine("{0}. {1}", i, string.Join(",", p));
+                    AlgorithmResult result = algorithm.bti(db, p, k);
+                    listTestResults.Add(result);
+                }
                 else if (algorithmName.Equals("btiv"))
                 {
                     Console.WriteLine("{0}. {1}", i, string.Join(",", p));
@@ -80,27 +100,27 @@ namespace MiningTopKCoOccurrenceItemsConsole
             // write result to file
             int totalProcessingTime = 0;
             int totalTimeToBuildData = 0;
-            foreach (var result in  listTestResults)
+            foreach (var result in listTestResults)
             {
                 fileOutput.WriteLine("--------------------");
                 IEnumerable<KeyValuePair<string, int>> lk = result.getListTopK();
                 foreach (var item in lk)
                 {
-                    fileOutput.WriteLine("{0}:{1}",item.Key,item.Value);
+                    fileOutput.WriteLine("{0}:{1}", item.Key, item.Value);
                 }
                 totalProcessingTime = totalProcessingTime + result.getRunningTime();
                 totalTimeToBuildData = totalTimeToBuildData + result.getTimeToBuildDatbase();
-                fileOutput.WriteLine("Time to build data: {0}ms",result.getTimeToBuildDatbase());
+                fileOutput.WriteLine("Time to build data: {0}ms", result.getTimeToBuildDatbase());
                 fileOutput.WriteLine("Time to processing: {0}ms", result.getRunningTime());
             }
-            fileOutput.WriteLine("===========================================");            
-            fileOutput.WriteLine("Avg time to build Pitree or Bittable: {0}ms",totalTimeToBuildData/listTestResults.Count);
+            fileOutput.WriteLine("===========================================");
+            fileOutput.WriteLine("Avg time to build Pitree or Bittable: {0}ms", totalTimeToBuildData / listTestResults.Count);
             fileOutput.WriteLine("Total Running time: {0}ms", totalProcessingTime);
             fileOutput.Close();
             Console.WriteLine("===========================================");
             Console.WriteLine("Avg time to build Pitree or Bittable: {0}ms", totalTimeToBuildData / listTestResults.Count);
             Console.WriteLine("Total Running time: {0}ms", totalProcessingTime);
-            Console.ReadLine();
+            Utils.WriteTestResult(dbName, algorithmName, k, queryLength, totalProcessingTime, totalTimeToBuildData / listTestResults.Count, 0);
         }
     }
 }
