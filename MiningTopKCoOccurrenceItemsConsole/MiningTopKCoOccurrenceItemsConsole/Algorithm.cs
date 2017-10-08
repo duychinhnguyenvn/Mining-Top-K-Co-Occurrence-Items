@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,8 +84,15 @@ namespace MiningTopKCoOccurrenceItemsConsole
             //build Tid-set
             double timeToBuildTidSet = 0;
             double processingTime = 0;
+            long preprocessingMem = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
+            long memoryUsed = GC.GetTotalMemory(true);
+            Console.WriteLine("Original mem: {0}MB", memoryUsed/ 1048576);
             List < List < string >> db_p = getDBP(db, p);
+            memoryUsed = GC.GetTotalMemory(true);
+            Console.WriteLine("Original mem: {0}MB", memoryUsed / 1048576);
+            preprocessingMem = GC.GetTotalMemory(true) - memoryUsed;
+            Console.WriteLine("Preprocessing mem Usage: {0}MB", preprocessingMem / 1048576);
             watch.Stop();
             timeToBuildTidSet = watch.Elapsed.TotalMilliseconds;
             // Re run NT
@@ -110,7 +118,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
             
-            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildTidSet,lk);
+            return new AlgorithmResult((int)processingTime,(int)preprocessingMem, (int)timeToBuildTidSet,lk);
         }
         public AlgorithmResult ntta(List<List<string>> db, List<string> p, int k)
         {
@@ -207,7 +215,11 @@ namespace MiningTopKCoOccurrenceItemsConsole
             double procesingTime = 0;
             double timeToBuildPiTree = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
+            long memoryUsed = GC.GetTotalMemory(true);
+            Console.WriteLine("Original mem: {0}MB", memoryUsed / 1048576);
             PiTree ptr = new PiTree(db);
+            memoryUsed = GC.GetTotalMemory(true);
+            Console.WriteLine("Original mem: {0}MB", memoryUsed / 1048576);
             watch.Stop();
             timeToBuildPiTree = watch.Elapsed.TotalMilliseconds;
             watch = System.Diagnostics.Stopwatch.StartNew();

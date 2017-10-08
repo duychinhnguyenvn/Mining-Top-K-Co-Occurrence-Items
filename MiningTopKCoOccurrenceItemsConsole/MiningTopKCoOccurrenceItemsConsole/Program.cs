@@ -13,8 +13,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             List<List<string>> db;            
             //int[] listk=new int[] { 1,5,10,15};
             //int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
-            int[] listk = new int[] { 10 };
-            int[] listQueryLength = new int[] { 3};
+            int[] listk = new int[] { 15 };
+            int[] listQueryLength = new int[] { 6,7};
             string algorithmName;
             // Load database
             Console.Write("Database: ");
@@ -100,6 +100,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             // write result to file
             int totalProcessingTime = 0;
             int totalTimeToBuildData = 0;
+            int totalPreprocessingMemUsage = 0;
             foreach (var result in listTestResults)
             {
                 fileOutput.WriteLine("--------------------");
@@ -110,17 +111,22 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 }
                 totalProcessingTime = totalProcessingTime + result.getRunningTime();
                 totalTimeToBuildData = totalTimeToBuildData + result.getTimeToBuildDatbase();
+                totalPreprocessingMemUsage = totalPreprocessingMemUsage + result.getMemDatabase();
                 fileOutput.WriteLine("Time to build data: {0}ms", result.getTimeToBuildDatbase());
+                fileOutput.WriteLine("Mem Usage to preprocessing phase: {0}MB", result.getMemDatabase()/ 1048576);
                 fileOutput.WriteLine("Time to processing: {0}ms", result.getRunningTime());
+                
             }
             fileOutput.WriteLine("===========================================");
             fileOutput.WriteLine("Avg time to build Pitree or Bittable: {0}ms", totalTimeToBuildData / listTestResults.Count);
-            fileOutput.WriteLine("Total Running time: {0}ms", totalProcessingTime);
+            fileOutput.WriteLine("Avg preprocessing Mem Usage to build Pitree or Bittable: {0}MB", totalPreprocessingMemUsage/ 1048576 / listTestResults.Count);
+            fileOutput.WriteLine("Total Running time: {0}ms", totalProcessingTime);            
             fileOutput.Close();
             Console.WriteLine("===========================================");
             Console.WriteLine("Avg time to build Pitree or Bittable: {0}ms", totalTimeToBuildData / listTestResults.Count);
+            Console.WriteLine("Avg preprocessing Mem Usage to build Pitree or Bittable: {0}MB", totalPreprocessingMemUsage / 1048576 / listTestResults.Count);
             Console.WriteLine("Total Running time: {0}ms", totalProcessingTime);
-            Utils.WriteTestResult(dbName, algorithmName, k, queryLength, totalProcessingTime, totalTimeToBuildData / listTestResults.Count, 0);
+            Utils.WriteTestResult(dbName, algorithmName, k, queryLength, totalProcessingTime, totalTimeToBuildData / listTestResults.Count, totalPreprocessingMemUsage/ 1048576 / listTestResults.Count);
         }
     }
 }
