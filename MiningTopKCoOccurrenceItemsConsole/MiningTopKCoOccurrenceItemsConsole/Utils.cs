@@ -23,6 +23,11 @@ namespace MiningTopKCoOccurrenceItemsConsole
             {
                 n = rnd.Next(db.Count-1);
                 List<string> rdTran = db[n];
+                while (rdTran.Count<30)
+                {
+                    n = rnd.Next(db.Count - 1);
+                    rdTran = db[n];
+                }
                 List<string> patternList = new List<string>();
                 for (int j=0;j<length;j++)
                 {

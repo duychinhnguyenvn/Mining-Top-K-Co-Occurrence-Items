@@ -19,6 +19,12 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 case "accidents":
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER+"accidents.dat");
                     break;
+                case "syn_data1":
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data1.dat");
+                    break;
+                case "syn_data2":
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data2.dat");
+                    break;
                 default:
                     db = exampleDB();
                     break;
