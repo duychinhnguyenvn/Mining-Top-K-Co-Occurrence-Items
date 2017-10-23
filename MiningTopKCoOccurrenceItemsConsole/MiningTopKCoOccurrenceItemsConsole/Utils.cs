@@ -62,6 +62,12 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 case "accidents":
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER + "accidents_"+length+".txt");
                     break;
+                case "syn_data1":
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data1_" + length + ".txt");
+                    break;
+                case "syn_data2":
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data2_" + length + ".txt");
+                    break;
                 default:
                     db = new List<List<string>>();
                     db.Add(new List<string>(new string[] {"a","c" }));
@@ -186,6 +192,22 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     break;
                 }else
                     if (item.Name.Equals("accidents") && dbName.Equals("accidents"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = totalProcessingTime;
+                    break;
+                }
+                else
+                    if (item.Name.Equals("syn_data1") && dbName.Equals("syn_data1"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = totalProcessingTime;
+                    break;
+                }
+                else
+                    if (item.Name.Equals("syn_data2") && dbName.Equals("syn_data2"))
                 {
                     worksheet = item;
                     Range cell = worksheet.Rows.Cells[row, col];
