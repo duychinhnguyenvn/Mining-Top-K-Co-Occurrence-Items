@@ -8,11 +8,11 @@ namespace MiningTopKCoOccurrenceItemsConsole
 {
     class AlgorithmResult
     {
-        private int runningTime;
-        private int memDatabase;
-        private int timeToBuildDatabase;
+        private double runningTime;
+        private long memDatabase;
+        private double timeToBuildDatabase;
         private IEnumerable<KeyValuePair<string,int>>  lk;
-        public AlgorithmResult(int runningTime,int memDatabase,int timeToBuildDatabase, IEnumerable<KeyValuePair<string, int>> lk)
+        public AlgorithmResult(double runningTime,long memDatabase, double timeToBuildDatabase, IEnumerable<KeyValuePair<string, int>> lk)
         {
             this.runningTime = runningTime; // ms
             this.memDatabase = memDatabase; //mb
@@ -20,15 +20,15 @@ namespace MiningTopKCoOccurrenceItemsConsole
             this.lk = lk;
             
         }
-        public int getRunningTime()
+        public double getRunningTime()
         {
             return this.runningTime;
         }
-        public int getMemDatabase()
+        public long getMemDatabase()
         {
             return this.memDatabase;
         }
-        public int getTimeToBuildDatbase()
+        public double getTimeToBuildDatbase()
         {
             return this.timeToBuildDatabase;
         }

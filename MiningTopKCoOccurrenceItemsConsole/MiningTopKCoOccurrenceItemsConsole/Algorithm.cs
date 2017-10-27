@@ -78,7 +78,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in co orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             runningTime = watch.Elapsed.TotalMilliseconds;            
-            return new AlgorithmResult((int)runningTime,0,0,lk);
+            return new AlgorithmResult(runningTime,0,0,lk);
         }
         public AlgorithmResult nti(List<List<string>> db, List<string> p, int k) {
             //build Tid-set
@@ -118,7 +118,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
             
-            return new AlgorithmResult((int)processingTime,(int)preprocessingMem, (int)timeToBuildTidSet,lk);
+            return new AlgorithmResult(processingTime,preprocessingMem,timeToBuildTidSet,lk);
         }
         public AlgorithmResult ntta(List<List<string>> db, List<string> p, int k)
         {
@@ -195,7 +195,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             {
                 lk[item] = CO[item];
             }
-            return new AlgorithmResult((int)processingTime,0,0,lk);
+            return new AlgorithmResult(processingTime,0,0,lk);
         }
         public AlgorithmResult ntita(List<List<string>> db, List<string> p, int k)
         {
@@ -208,7 +208,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             Algorithm algorithm = new Algorithm();
             var result = algorithm.ntta(dbp, p, k);
             processingTime = result.getRunningTime();
-            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildTidSet,result.getListTopK());
+            return new AlgorithmResult(processingTime,0,timeToBuildTidSet,result.getListTopK());
         }
         public AlgorithmResult pt(List<List<string>> db, List<string> p, int k)
         {
@@ -296,12 +296,12 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO_Result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             procesingTime = watch.Elapsed.TotalMilliseconds;
-            return new AlgorithmResult((int)procesingTime,0,(int)timeToBuildPiTree,lk);
+            return new AlgorithmResult(procesingTime,0,timeToBuildPiTree,lk);
         }
         public AlgorithmResult ptta(List<List<string>> db, List<string> p, int k)
         {
             double processingTime = 0;
-            return new AlgorithmResult((int)processingTime,0,0,new Dictionary<string,int>());
+            return new AlgorithmResult(processingTime,0,0,new Dictionary<string,int>());
         }
         public AlgorithmResult bt(List<List<string>> db, List<string> p, int k)
         {
@@ -352,7 +352,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
-            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildBitTable,lk);
+            return new AlgorithmResult(processingTime,0,timeToBuildBitTable,lk);
         }
         public AlgorithmResult bti(List<List<string>> db, List<string> p, int k)
         {
@@ -367,7 +367,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var algorithmResult = algorithm.bt(dbp,p,k);
             processingTime = algorithmResult.getRunningTime();
             timeToBuildBitTable = algorithmResult.getTimeToBuildDatbase();
-            return new AlgorithmResult((int)processingTime,0,(int)(timeToBuildTidSet+timeToBuildBitTable),algorithmResult.getListTopK());
+            return new AlgorithmResult(processingTime,0,(timeToBuildTidSet+timeToBuildBitTable),algorithmResult.getListTopK());
         }
         public AlgorithmResult btiv(List<List<string>> db, List<string> p, int k)
         {
@@ -398,7 +398,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
-            return new AlgorithmResult((int)processingTime,0,(int)timeToBuildBitTable,lk);
+            return new AlgorithmResult(processingTime,0,timeToBuildBitTable,lk);
         }
     }
 }

@@ -11,10 +11,10 @@ namespace MiningTopKCoOccurrenceItemsConsole
         static void Main(string[] args)
         {
             List<List<string>> db;            
-            int[] listk=new int[] { 1,5,10,15};
+            //int[] listk=new int[] { 1,5,10,15};
+            //int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
+            int[] listk = new int[] { 1 };
             int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
-            //int[] listk = new int[] { 15 };
-            //int[] listQueryLength = new int[] { 6,7};
             string algorithmName;
             // Load database
             Console.Write("Database: ");
@@ -102,9 +102,9 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 }
             }
             // write result to file
-            int totalProcessingTime = 0;
-            int totalTimeToBuildData = 0;
-            int totalPreprocessingMemUsage = 0;
+            double totalProcessingTime = 0;
+            double totalTimeToBuildData = 0;
+            long totalPreprocessingMemUsage = 0;
             foreach (var result in listTestResults)
             {
                 fileOutput.WriteLine("--------------------");
@@ -130,7 +130,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             Console.WriteLine("Avg time to build Pitree or Bittable: {0}ms", totalTimeToBuildData / listTestResults.Count);
             Console.WriteLine("Avg preprocessing Mem Usage to build Pitree or Bittable: {0}MB", totalPreprocessingMemUsage / 1048576 / listTestResults.Count);
             Console.WriteLine("Total Running time: {0}ms", totalProcessingTime);
-            Utils.WriteTestResult(dbName, algorithmName, k, queryLength, totalProcessingTime, totalTimeToBuildData / listTestResults.Count, totalPreprocessingMemUsage/ 1048576 / listTestResults.Count);
+            Utils.WriteTestResult(dbName, algorithmName, k, queryLength, (int)totalProcessingTime, (int)(totalTimeToBuildData / listTestResults.Count),(int)(totalPreprocessingMemUsage/ 1048576 / listTestResults.Count));
         }
     }
 }
