@@ -11,19 +11,19 @@ namespace MiningTopKCoOccurrenceItemsConsole
         static void Main(string[] args)
         {
             List<List<string>> db;            
-            int[] listk=new int[] { 1,5,10,15};
-            int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
-            //int[] listk = new int[] { 1 };
+            //int[] listk=new int[] { 1,5,10,15};
             //int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
+            int[] listk = new int[] { 1 };
+            int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
             string algorithmName;
             // Load database
             Console.Write("Database: ");
             string dbName=Console.ReadLine().Trim().ToLower();
             db = Database.getDatabase(dbName);
-            Console.WriteLine("Total rows: {0}",db.Count);
+            
                         // Generate test queries
-                        //foreach (var length in listQueryLength)
-                        //{
+                       // foreach (var length in listQueryLength)
+                       //{
                         //    Utils.genQueryItemsetsToFile(dbName, length);
                         //}
                         //return;     

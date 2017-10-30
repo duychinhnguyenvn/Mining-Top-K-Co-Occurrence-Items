@@ -56,7 +56,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     string i = copyTran[0];
                     copyTran.Remove(i);
                     insertTree(i, copyTran, root, headerTable);
-                }
+                } 
             }
 
         }

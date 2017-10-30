@@ -51,15 +51,21 @@ namespace MiningTopKCoOccurrenceItemsConsole
         {
             List<List<string>> db = new List<List<string>>();
             string line;
-
+            List<string> listItems = new List<string>();
             // Read the file and display it line by line.
             System.IO.StreamReader file = new System.IO.StreamReader(path);
             while ((line = file.ReadLine()) != null)
             {
-                db.Add(line.Trim().Split(' ').ToList<string>());
+                List<string> lineItems = line.Trim().Split(' ').ToList<string>();
+                //foreach (var item in lineItems) {
+                 //   if (!listItems.Contains(item)) listItems.Add(item);
+                //}
+                db.Add(lineItems);
             }
 
             file.Close();
+            Console.WriteLine("Loaded row count: {0}", db.Count);
+            //Console.WriteLine("Total Items: {0}",listItems.Count);
             return db;
         }
     }

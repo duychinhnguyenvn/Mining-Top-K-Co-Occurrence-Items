@@ -86,12 +86,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             double processingTime = 0;
             long preprocessingMem = 0;
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            long memoryUsed = GC.GetTotalMemory(true);
-            Console.WriteLine("Original mem: {0}MB", memoryUsed/ 1048576);
             List < List < string >> db_p = getDBP(db, p);
-            memoryUsed = GC.GetTotalMemory(true);
-            Console.WriteLine("Original mem: {0}MB", memoryUsed / 1048576);
-            preprocessingMem = GC.GetTotalMemory(true) - memoryUsed;
             Console.WriteLine("Preprocessing mem Usage: {0}MB", preprocessingMem / 1048576);
             watch.Stop();
             timeToBuildTidSet = watch.Elapsed.TotalMilliseconds;
@@ -117,7 +112,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in co orderby entry.Value descending select entry).Take(k);            
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
-            
+            Console.WriteLine("Preprocessing time: {0}ms", timeToBuildTidSet);
+            Console.WriteLine("Running time: {0}ms", processingTime);
             return new AlgorithmResult(processingTime,preprocessingMem,timeToBuildTidSet,lk);
         }
         public AlgorithmResult ntta(List<List<string>> db, List<string> p, int k)
@@ -296,6 +292,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO_Result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             procesingTime = watch.Elapsed.TotalMilliseconds;
+            Console.WriteLine("Preprocessing time: {0}ms", timeToBuildPiTree);
+            Console.WriteLine("Running time: {0}ms", procesingTime);
             return new AlgorithmResult(procesingTime,0,timeToBuildPiTree,lk);
         }
         public AlgorithmResult ptta(List<List<string>> db, List<string> p, int k)
@@ -352,6 +350,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO_result orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
+            Console.WriteLine("Preprocessing time: {0}ms", timeToBuildBitTable);
+            Console.WriteLine("Running time: {0}ms", processingTime);
             return new AlgorithmResult(processingTime,0,timeToBuildBitTable,lk);
         }
         public AlgorithmResult bti(List<List<string>> db, List<string> p, int k)
@@ -367,6 +367,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var algorithmResult = algorithm.bt(dbp,p,k);
             processingTime = algorithmResult.getRunningTime();
             timeToBuildBitTable = algorithmResult.getTimeToBuildDatbase();
+            Console.WriteLine("Preprocessing time: {0}ms", timeToBuildBitTable);
+            Console.WriteLine("Running time: {0}ms", processingTime);
             return new AlgorithmResult(processingTime,0,(timeToBuildTidSet+timeToBuildBitTable),algorithmResult.getListTopK());
         }
         public AlgorithmResult btiv(List<List<string>> db, List<string> p, int k)
@@ -398,6 +400,8 @@ namespace MiningTopKCoOccurrenceItemsConsole
             var lk = (from entry in CO orderby entry.Value descending select entry).Take(k);
             watch.Stop();
             processingTime = watch.Elapsed.TotalMilliseconds;
+            Console.WriteLine("Preprocessing time: {0}ms", timeToBuildBitTable);
+            Console.WriteLine("Running time: {0}ms", processingTime);
             return new AlgorithmResult(processingTime,0,timeToBuildBitTable,lk);
         }
     }
