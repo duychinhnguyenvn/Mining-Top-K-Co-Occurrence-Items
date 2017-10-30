@@ -12,7 +12,10 @@ namespace MiningTopKCoOccurrenceItemsConsole
         {
             List<List<string>> db;
             switch (dbName)
-            {               
+            {
+                case "example":
+                    db = exampleDB() ;
+                    break;
                 case "connect":
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER+"connect.dat");
                     break;
@@ -26,7 +29,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data2.dat");
                     break;
                 default:
-                    db = exampleDB();
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + dbName+".dat");
                     break;
             }
             return db;

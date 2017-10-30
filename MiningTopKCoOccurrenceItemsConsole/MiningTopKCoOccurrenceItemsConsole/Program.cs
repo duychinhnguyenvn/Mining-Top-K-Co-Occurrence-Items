@@ -14,7 +14,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             //int[] listk=new int[] { 1,5,10,15};
             //int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
             int[] listk = new int[] { 1 };
-            int[] listQueryLength = new int[] { 3, 4, 5, 6, 7 };
+            int[] listQueryLength = new int[] { 3};
             string algorithmName;
             // Load database
             Console.Write("Database: ");
@@ -24,9 +24,9 @@ namespace MiningTopKCoOccurrenceItemsConsole
                         // Generate test queries
                        // foreach (var length in listQueryLength)
                        //{
-                        //    Utils.genQueryItemsetsToFile(dbName, length);
-                        //}
-                        //return;     
+                       //     Utils.genQueryItemsetsToFile(dbName, length);
+                       // }
+                       // return;     
             // Algorithm
             Console.Write("Algorithm: ");
             algorithmName = Console.ReadLine();

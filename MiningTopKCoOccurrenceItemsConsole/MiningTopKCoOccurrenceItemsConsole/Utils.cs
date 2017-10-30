@@ -56,6 +56,10 @@ namespace MiningTopKCoOccurrenceItemsConsole
             List<List<string>> db;
             switch (dbName)
             {
+                case "example":
+                    db = new List<List<string>>();
+                    db.Add(new List<string>(new string[] { "a", "c" }));
+                    break;
                 case "connect":
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER + "connect_"+length+".txt");
                     break;
@@ -69,8 +73,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     db = Database.loadDBFromFile(Utils.ROOTFOLDER + "syn_data2_" + length + ".txt");
                     break;
                 default:
-                    db = new List<List<string>>();
-                    db.Add(new List<string>(new string[] {"a","c" }));
+                    db = Database.loadDBFromFile(Utils.ROOTFOLDER + dbName+"_" + length + ".txt");
                     break;
             }
             return db;
@@ -208,6 +211,14 @@ namespace MiningTopKCoOccurrenceItemsConsole
                 }
                 else
                     if (item.Name.Equals("syn_data2") && dbName.Equals("syn_data2"))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = totalProcessingTime;
+                    break;
+                }
+                else
+                    if (item.Name.Equals(dbName))
                 {
                     worksheet = item;
                     Range cell = worksheet.Rows.Cells[row, col];
