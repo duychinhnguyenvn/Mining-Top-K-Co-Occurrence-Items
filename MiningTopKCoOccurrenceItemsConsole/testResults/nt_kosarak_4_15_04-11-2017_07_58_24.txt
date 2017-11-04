@@ -1,0 +1,1904 @@
+--------------------
+6:12
+11:11
+762:10
+25:10
+1:9
+218:9
+56:9
+148:9
+845:9
+747:9
+2035:8
+155:8
+379:8
+135:8
+1536:8
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 272.0585ms
+--------------------
+11:6
+218:6
+6:6
+148:6
+25:5
+235:5
+1466:5
+1132:5
+522:5
+2403:5
+473:5
+266:5
+269:4
+3364:4
+1738:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 267.8727ms
+--------------------
+11:1
+27:1
+1:1
+40:1
+659:1
+6:1
+3385:1
+5503:1
+11151:1
+247:1
+5663:1
+361:1
+9144:1
+4720:1
+221:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 253.6642ms
+--------------------
+853:13
+855:13
+856:13
+11:13
+218:13
+6:13
+446:13
+5006:12
+854:11
+5005:11
+5008:11
+462:11
+464:11
+5007:10
+1:10
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 233.5161ms
+--------------------
+324:7
+338:7
+11:7
+6:7
+354:7
+220:7
+254:7
+4732:7
+2273:7
+882:7
+1019:7
+1025:7
+44:7
+12:7
+46:7
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 215.9884ms
+--------------------
+27:3
+7:3
+205:3
+1507:3
+7350:3
+438:3
+1496:2
+3562:2
+7348:2
+9901:2
+6251:2
+1509:2
+7351:2
+10722:2
+897:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 211.3296ms
+--------------------
+11:5
+1:5
+901:5
+514:5
+508:4
+1034:4
+525:4
+528:4
+64:4
+1671:4
+670:4
+77:4
+218:3
+1917:3
+686:3
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.4962ms
+--------------------
+269:6
+11:6
+218:6
+6:6
+2888:6
+303:6
+254:6
+379:6
+273:6
+148:6
+4987:5
+987:5
+56:5
+41:5
+555:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.8122ms
+--------------------
+11:2
+6:2
+83:2
+28:2
+32:2
+6221:2
+23793:2
+6756:2
+4868:2
+1960:2
+5080:2
+2817:2
+897:2
+87:2
+215:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 214.0401ms
+--------------------
+27:3
+6:3
+1956:3
+1496:3
+205:3
+1959:3
+3327:3
+1960:3
+1507:3
+8076:3
+1052:3
+218:2
+2:2
+215:2
+845:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.5423ms
+--------------------
+325:2
+326:2
+327:2
+329:2
+330:2
+331:2
+332:2
+333:2
+334:2
+335:2
+336:2
+337:2
+6710:2
+3240:2
+151:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 212.1368ms
+--------------------
+6:32
+2124:32
+218:31
+148:31
+90:30
+142:30
+11:28
+1605:28
+1131:26
+1019:26
+1827:26
+777:26
+1025:26
+259:26
+1863:25
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 280.1776ms
+--------------------
+11:8
+27:8
+7:8
+205:8
+1960:8
+1507:8
+2817:8
+10928:7
+10530:7
+1508:6
+7733:6
+3292:6
+11694:6
+9095:6
+5903:6
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 222.2492ms
+--------------------
+11:5
+27:5
+1:5
+218:5
+6:5
+1456:5
+230:5
+2377:5
+155:5
+1863:5
+235:5
+2953:5
+1131:5
+650:5
+775:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 215.971ms
+--------------------
+11:13
+6:13
+205:13
+27:12
+1:12
+273:12
+14:12
+64:12
+77:12
+148:12
+446:12
+69:11
+640:11
+987:11
+218:11
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 217.681ms
+--------------------
+11:5
+6:5
+1:4
+2164:4
+2876:4
+730:4
+218:4
+753:4
+9:4
+55:4
+3230:4
+114:4
+4321:4
+131:4
+132:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 214.053ms
+--------------------
+324:28
+338:28
+339:28
+11:28
+330:26
+331:26
+332:24
+333:23
+218:23
+148:23
+326:23
+1:22
+325:22
+327:22
+334:22
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.7516ms
+--------------------
+11:25
+218:25
+6:25
+90:24
+148:24
+25:21
+1019:21
+155:20
+772:20
+306:20
+151:19
+351:19
+747:19
+364:19
+1857:19
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 213.8312ms
+--------------------
+11:6
+27:6
+6:6
+83:6
+212:6
+218:5
+2:5
+215:5
+512:5
+7:5
+400:5
+205:5
+1507:5
+206:5
+86:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 269.0316ms
+--------------------
+6:12
+2050:12
+1610:12
+102:12
+106:12
+69:11
+2019:11
+151:11
+507:11
+1162:11
+1451:11
+269:11
+2150:11
+987:11
+218:11
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 219.8208ms
+--------------------
+6:64
+218:58
+148:58
+1:54
+155:53
+21:49
+235:49
+25:48
+90:48
+230:48
+364:47
+237:47
+357:47
+2952:46
+522:46
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 216.7296ms
+--------------------
+11:2
+27:2
+6:2
+10140:2
+2395:2
+12448:2
+3276:2
+1956:2
+11253:2
+4382:2
+8705:2
+205:2
+1960:2
+5445:2
+1051:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.8724ms
+--------------------
+1305:3
+1351:3
+1362:3
+1436:3
+1437:3
+508:3
+11:3
+218:3
+6:3
+55:3
+4573:3
+1534:3
+1686:3
+1124:3
+747:3
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 188.2483ms
+--------------------
+11:4
+27:4
+6:4
+1541:4
+1065:4
+1545:4
+361:4
+3:4
+506:3
+640:3
+1:3
+218:3
+2:3
+3680:3
+215:3
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 211.0136ms
+--------------------
+1214:1
+1225:1
+1236:1
+1247:1
+1257:1
+1260:1
+1271:1
+1282:1
+1293:1
+1304:1
+1305:1
+1316:1
+1327:1
+1338:1
+1344:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 225.5912ms
+--------------------
+5584:1
+6010:1
+11:1
+27:1
+6:1
+4786:1
+1591:1
+55:1
+138:1
+2044:1
+2045:1
+931:1
+369:1
+1830:1
+2052:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 176.3883ms
+--------------------
+1366:274
+1367:274
+1351:273
+1369:273
+1437:273
+1305:272
+6:270
+1360:269
+1361:268
+1364:268
+1352:267
+1363:267
+1370:267
+218:267
+1350:266
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 227.3391ms
+--------------------
+3661:1
+986:1
+9380:1
+795:1
+269:1
+11:1
+7744:1
+27:1
+1:1
+218:1
+6:1
+2:1
+344:1
+1455:1
+7945:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 189.3278ms
+--------------------
+11:1
+1:1
+218:1
+6:1
+255:1
+4980:1
+22828:1
+20821:1
+24358:1
+4587:1
+21245:1
+7048:1
+1149:1
+22221:1
+6060:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 227.4369ms
+--------------------
+218:10
+6:10
+260:10
+281:10
+148:10
+11:9
+2118:9
+2119:9
+2069:9
+578:9
+232:9
+1602:9
+259:9
+158:9
+2952:9
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 215.3636ms
+--------------------
+205:16
+6:15
+27:14
+7:13
+1960:12
+2815:12
+1956:11
+1051:11
+2817:11
+2100:11
+5338:10
+3924:10
+8967:9
+13572:8
+1507:8
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 208.6373ms
+--------------------
+1:1
+6:1
+1884:1
+1591:1
+9:1
+1458:1
+1018:1
+3257:1
+773:1
+650:1
+894:1
+1035:1
+2132:1
+90:1
+521:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 219.0671ms
+--------------------
+69:7
+11:7
+1:7
+218:7
+40:7
+6:7
+2:7
+56:7
+548:7
+1644:7
+273:7
+106:7
+64:7
+86:7
+531:7
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.9247ms
+--------------------
+69:2
+324:2
+325:2
+326:2
+327:2
+329:2
+330:2
+331:2
+332:2
+333:2
+334:2
+335:2
+336:2
+337:2
+338:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 203.6139ms
+--------------------
+1960:53
+6:52
+205:51
+11:45
+1052:37
+2817:36
+1956:31
+1051:28
+1496:27
+3276:26
+1:24
+215:24
+505:23
+3:22
+278:22
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 208.7668ms
+--------------------
+5092:4
+5093:4
+4833:4
+4835:4
+4836:4
+4837:4
+4838:4
+5101:4
+11:4
+6:4
+148:4
+4839:3
+4840:3
+987:3
+7:3
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 176.2536ms
+--------------------
+11:2
+27:2
+987:2
+1:2
+218:2
+6:2
+1593:2
+1888:2
+1892:2
+1895:2
+1836:2
+1898:2
+1769:2
+2:2
+1770:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 204.3815ms
+--------------------
+7:23
+212:23
+5452:22
+5453:22
+5454:22
+5455:22
+10690:22
+6:20
+11:19
+87:17
+205:17
+10691:16
+1594:15
+278:14
+83:13
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.9667ms
+--------------------
+11:8
+1:8
+218:8
+6:8
+1863:8
+644:8
+148:8
+361:7
+424:7
+136:7
+1805:7
+1644:7
+255:7
+235:7
+90:7
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.8872ms
+--------------------
+69:1
+145:1
+11:1
+490:1
+27:1
+987:1
+1:1
+218:1
+6:1
+2:1
+753:1
+3978:1
+4961:1
+215:1
+138:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.109ms
+--------------------
+27:2
+6:2
+7:2
+3635:2
+11585:2
+5768:2
+5769:2
+402:2
+12719:2
+5779:2
+897:2
+455:2
+1945:1
+1906:1
+1770:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 208.8016ms
+--------------------
+6:166
+218:164
+148:162
+11:160
+155:140
+1:127
+1536:126
+21:120
+364:119
+259:119
+90:117
+232:111
+25:110
+358:109
+237:108
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 242.9703ms
+--------------------
+39:1
+506:1
+1063:1
+3594:1
+11:1
+27:1
+987:1
+1:1
+218:1
+6:1
+2941:1
+138:1
+4692:1
+1121:1
+254:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 216.0767ms
+--------------------
+3244:2
+2001:2
+5104:2
+11:2
+2024:2
+314:2
+6:2
+343:2
+1458:2
+3257:2
+3258:2
+4962:2
+138:2
+2163:2
+3607:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 208.4374ms
+--------------------
+11:18
+6:18
+218:17
+465:17
+148:16
+435:16
+587:16
+446:16
+455:16
+1:15
+464:15
+555:14
+131:14
+14:13
+3835:13
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 222.8227ms
+--------------------
+11:16
+6:16
+218:15
+56:15
+90:15
+148:15
+1:14
+49:14
+777:14
+155:13
+260:13
+235:13
+237:13
+1456:12
+370:12
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 217.0897ms
+--------------------
+324:5
+325:5
+326:5
+327:5
+329:5
+330:5
+332:5
+333:5
+334:5
+335:5
+336:5
+337:5
+338:5
+339:5
+11:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 218.943ms
+--------------------
+6:15
+1:14
+11:13
+218:13
+56:13
+379:13
+148:13
+135:13
+2025:12
+694:12
+151:11
+220:11
+1464:11
+3322:11
+64:11
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.9099ms
+--------------------
+11:2
+27:2
+6:2
+28:2
+7:2
+400:2
+32:2
+205:2
+87:2
+4238:2
+23356:2
+5609:2
+595:2
+77:2
+640:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 240.0702ms
+--------------------
+11:1
+6:1
+3680:1
+2999:1
+303:1
+45:1
+1145:1
+1829:1
+12:1
+4616:1
+1531:1
+2993:1
+238:1
+1044:1
+241:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 203.634ms
+--------------------
+11:8
+218:8
+6:8
+1168:8
+1686:8
+2155:8
+1514:8
+2871:8
+747:8
+2263:8
+581:8
+2035:8
+1127:8
+1128:8
+363:8
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.59ms
+--------------------
+11:1
+1:1
+218:1
+6:1
+56:1
+2941:1
+139:1
+3693:1
+55:1
+247:1
+4692:1
+254:1
+221:1
+255:1
+155:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 187.8078ms
+--------------------
+4241:1
+3155:1
+3242:1
+1451:1
+3245:1
+269:1
+11:1
+1:1
+218:1
+6:1
+2:1
+3387:1
+303:1
+10507:1
+3571:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 213.7371ms
+--------------------
+27:3
+6:3
+7523:3
+1956:3
+8966:3
+3278:3
+278:2
+7:2
+10419:2
+11762:2
+751:2
+10139:2
+11764:2
+11094:2
+3271:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 242.4174ms
+--------------------
+325:4
+326:4
+327:4
+329:4
+330:4
+331:4
+333:4
+334:4
+335:4
+336:4
+337:4
+338:4
+339:4
+11:4
+1:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 214.6617ms
+--------------------
+6:2
+28:2
+7:2
+32:2
+11491:2
+12814:2
+15760:2
+36:2
+37:2
+6952:2
+7727:2
+7728:2
+7730:2
+1507:2
+3:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 210.251ms
+--------------------
+6:14
+512:14
+11:13
+218:13
+1699:13
+46:13
+148:13
+1:12
+1696:12
+1627:12
+1628:12
+1703:12
+1629:12
+1631:12
+1632:12
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 182.6456ms
+--------------------
+11:13
+6:13
+28:13
+7:13
+87:11
+897:10
+1:9
+218:9
+148:9
+205:8
+83:8
+90:7
+321:7
+1138:7
+807:6
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.5864ms
+--------------------
+11:23
+218:23
+6:23
+148:23
+1644:20
+2952:20
+260:20
+354:19
+3197:19
+2258:19
+845:19
+255:19
+230:19
+155:19
+232:19
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 225.1159ms
+--------------------
+11:1
+4:1
+987:1
+1:1
+6:1
+215:1
+1801:1
+138:1
+4747:1
+5049:1
+3437:1
+696:1
+2192:1
+83:1
+8416:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 202.5336ms
+--------------------
+507:1
+11:1
+27:1
+987:1
+1:1
+218:1
+161:1
+2086:1
+40:1
+659:1
+3456:1
+1143:1
+665:1
+6:1
+2:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.2312ms
+--------------------
+11:13
+218:11
+555:11
+135:11
+148:11
+838:11
+144:11
+1:11
+2025:10
+2261:10
+90:10
+777:10
+379:10
+3804:10
+131:10
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 210.8588ms
+--------------------
+69:1
+39:1
+8305:1
+3969:1
+11:1
+3558:1
+3482:1
+640:1
+1997:1
+1642:1
+27:1
+1:1
+218:1
+6:1
+1875:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 174.6234ms
+--------------------
+69:11
+39:11
+269:11
+640:11
+218:11
+40:11
+314:11
+1489:11
+6:11
+1885:11
+1769:11
+2:11
+1906:11
+1770:11
+1771:11
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.2384ms
+--------------------
+1524:2
+324:2
+325:2
+326:2
+327:2
+328:2
+329:2
+330:2
+331:2
+332:2
+333:2
+334:2
+335:2
+336:2
+337:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.018ms
+--------------------
+69:6
+506:6
+795:6
+11:6
+1:6
+218:6
+6:6
+303:6
+2163:6
+2952:6
+281:6
+829:6
+1469:6
+689:6
+3394:6
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 226.9714ms
+--------------------
+69:1
+1194:1
+1195:1
+1196:1
+1197:1
+1198:1
+1199:1
+1200:1
+268:1
+11:1
+532:1
+1:1
+218:1
+6:1
+254:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 282.6377ms
+--------------------
+11:1
+27:1
+1:1
+6:1
+820:1
+8433:1
+1912:1
+3485:1
+14314:1
+1990:1
+1811:1
+3230:1
+47:1
+294:1
+83:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 236.4158ms
+--------------------
+11:5
+218:5
+6:5
+21:5
+364:5
+230:5
+512:5
+514:5
+2124:5
+1810:5
+525:5
+1518:5
+528:5
+1519:5
+530:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 206.702ms
+--------------------
+5093:11
+4831:11
+5094:11
+4376:11
+4832:11
+5095:11
+5096:11
+5097:11
+4833:11
+4834:11
+4835:11
+4836:11
+4837:11
+4838:11
+4839:11
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 210.9378ms
+--------------------
+5092:22
+5093:22
+4834:22
+4835:22
+5101:22
+218:22
+6:22
+4831:21
+11:21
+4836:21
+4837:21
+4838:21
+4839:21
+4840:21
+5094:20
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 211.2149ms
+--------------------
+69:1
+324:1
+338:1
+339:1
+11:1
+1:1
+6:1
+344:1
+78:1
+351:1
+9:1
+303:1
+17441:1
+10889:1
+10891:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 215.2101ms
+--------------------
+5280:1
+3969:1
+151:1
+269:1
+11:1
+27:1
+6:1
+991:1
+9:1
+303:1
+1838:1
+1644:1
+540:1
+358:1
+2952:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 211.7557ms
+--------------------
+11:2
+6:2
+2876:2
+6867:2
+2977:2
+14:2
+97:2
+397:2
+629:2
+4321:2
+1718:2
+2057:2
+64:2
+3405:2
+531:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 214.7036ms
+--------------------
+490:1
+27:1
+1:1
+6:1
+3:1
+1639:1
+7:1
+2395:1
+7558:1
+3272:1
+3273:1
+1956:1
+2804:1
+3307:1
+3283:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 223.409ms
+--------------------
+11:142
+218:128
+90:128
+148:122
+142:121
+1:112
+1827:110
+777:99
+281:98
+260:95
+1132:87
+522:87
+1756:86
+25:82
+827:81
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 234.2359ms
+--------------------
+324:2
+326:2
+327:2
+328:2
+329:2
+330:2
+331:2
+332:2
+333:2
+334:2
+335:2
+336:2
+337:2
+338:2
+339:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 201.0984ms
+--------------------
+506:2
+11:2
+658:2
+2024:2
+314:2
+6:2
+139:2
+3695:2
+556:2
+4685:2
+1117:2
+1025:2
+3784:2
+598:2
+4616:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 216.2602ms
+--------------------
+86:7
+69:5
+11:5
+27:5
+6:5
+56:5
+1456:5
+555:5
+138:5
+229:5
+1824:5
+364:5
+140:5
+379:5
+3322:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 227.1883ms
+--------------------
+3949:44
+2206:44
+3240:44
+2102:44
+3155:44
+5615:44
+2019:44
+151:44
+507:44
+1162:44
+3242:44
+3156:44
+3246:44
+3588:44
+6212:44
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 219.034ms
+--------------------
+11:6
+987:6
+218:6
+6:6
+155:6
+135:6
+148:6
+268:5
+27:5
+1:5
+2025:5
+303:5
+1838:5
+1644:5
+3197:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.0139ms
+--------------------
+11:10
+218:10
+6:10
+90:10
+148:10
+138:9
+364:9
+230:9
+1652:9
+269:8
+40:8
+314:8
+56:8
+25:8
+155:8
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 210.0698ms
+--------------------
+6:17
+1:12
+218:12
+148:12
+866:10
+762:9
+3:9
+438:9
+2952:9
+101:8
+56:8
+90:8
+64:7
+151:7
+687:7
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.4834ms
+--------------------
+11:6
+6:6
+56:6
+1:5
+364:5
+2952:5
+235:5
+1044:5
+719:5
+438:5
+442:5
+218:4
+555:4
+21:4
+358:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 174.349ms
+--------------------
+11:1
+27:1
+6:1
+4213:1
+83:1
+7095:1
+1611:1
+126:1
+652:1
+1138:1
+2331:1
+7:1
+13608:1
+3276:1
+49:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 224.2449ms
+--------------------
+5611:1
+5612:1
+5280:1
+269:1
+11:1
+4:1
+27:1
+987:1
+218:1
+6:1
+4170:1
+348:1
+5913:1
+6349:1
+7571:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 207.1928ms
+--------------------
+151:5
+11:5
+6:5
+2103:5
+21:5
+747:5
+229:5
+824:5
+230:5
+155:5
+237:5
+690:5
+691:5
+694:5
+397:5
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 210.267ms
+--------------------
+1187:192
+1189:192
+218:192
+6:192
+148:192
+1185:190
+1186:190
+1184:189
+1194:189
+1191:188
+1202:188
+1195:187
+1196:187
+1197:187
+1198:187
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 227.5511ms
+--------------------
+11:2
+6:2
+347:2
+685:2
+25:2
+773:2
+46:2
+379:2
+283:2
+3226:2
+1845:2
+48:2
+701:2
+702:2
+4628:2
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 214.1133ms
+--------------------
+90:55
+11:53
+218:50
+777:50
+1:47
+504:43
+148:43
+303:41
+521:41
+7:38
+135:36
+269:35
+56:35
+77:34
+136:34
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 212.2234ms
+--------------------
+603:8
+1:8
+6:8
+77:8
+737:8
+148:8
+269:7
+11:7
+1569:7
+27:7
+987:7
+40:7
+303:7
+512:7
+2952:7
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 193.8273ms
+--------------------
+11:1
+27:1
+6:1
+5182:1
+361:1
+882:1
+83:1
+9395:1
+3194:1
+9396:1
+93:1
+2448:1
+14:1
+4523:1
+99:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 225.1008ms
+--------------------
+64:20
+11:19
+6:19
+62:19
+1:16
+106:16
+109:16
+112:16
+131:16
+102:15
+1716:15
+104:15
+1744:15
+724:15
+832:14
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 218.0393ms
+--------------------
+11:5
+27:5
+659:5
+6:5
+215:5
+90:5
+3489:5
+397:5
+118:5
+77:5
+136:5
+667:5
+438:5
+1:4
+218:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 220.7681ms
+--------------------
+6:164
+218:130
+148:130
+135:110
+90:96
+136:94
+56:87
+303:84
+155:83
+25:80
+316:78
+230:76
+3:76
+364:76
+987:73
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 253.5156ms
+--------------------
+6:152
+11:149
+218:139
+148:136
+77:101
+987:90
+7:90
+90:88
+40:87
+504:87
+273:85
+27:79
+64:79
+229:79
+269:79
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 231.1131ms
+--------------------
+11:1
+27:1
+6:1
+1469:1
+934:1
+28:1
+7:1
+1050:1
+7573:1
+12409:1
+1495:1
+3905:1
+1496:1
+3907:1
+205:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 204.4457ms
+--------------------
+4660:4
+269:4
+218:4
+303:4
+90:4
+260:4
+2136:4
+306:4
+504:4
+2192:4
+273:4
+558:4
+815:4
+563:4
+838:4
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 209.8605ms
+--------------------
+6:40
+14:35
+64:31
+27:26
+118:25
+126:24
+133:23
+1:23
+218:23
+148:23
+2298:20
+397:20
+584:20
+87:20
+670:19
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 222.4032ms
+--------------------
+69:1
+11:1
+490:1
+1489:1
+6:1
+20304:1
+83:1
+3:1
+3985:1
+1772:1
+192:1
+10609:1
+204:1
+1138:1
+2331:1
+Time to build data: 0ms
+Mem Usage to preprocessing phase: 0MB
+Time to processing: 221.986ms
+===========================================
+Avg time to build Pitree or Bittable: 0ms
+Avg preprocessing Mem Usage to build Pitree or Bittable: 0MB
+Total Running time: 21629.3575ms
