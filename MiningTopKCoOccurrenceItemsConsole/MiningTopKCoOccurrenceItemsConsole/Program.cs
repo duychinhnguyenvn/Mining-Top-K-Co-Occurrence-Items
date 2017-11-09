@@ -22,11 +22,11 @@ namespace MiningTopKCoOccurrenceItemsConsole
             db = Database.getDatabase(dbName);
             
                         // Generate test queries
-                       // foreach (var length in listQueryLength)
-                       //{
-                       //     Utils.genQueryItemsetsToFile(dbName, length);
-                       // }
-                       // return;     
+                        //foreach (var length in listQueryLength)
+                      // {
+                        //    Utils.genQueryItemsetsToFile(dbName, length);
+                        //}
+                        //return;     
             // Algorithm
             Console.Write("Algorithm: ");
             algorithmName = Console.ReadLine();
