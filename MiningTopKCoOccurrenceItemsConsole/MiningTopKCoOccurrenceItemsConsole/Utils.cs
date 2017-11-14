@@ -250,6 +250,14 @@ namespace MiningTopKCoOccurrenceItemsConsole
                     cell.Value = avgPreprocessingTime;
                     break;
                 }
+                else
+                    if (item.Name.Equals(dbName))
+                {
+                    worksheet = item;
+                    Range cell = worksheet.Rows.Cells[row, col];
+                    cell.Value = avgPreprocessingTime;
+                    break;
+                }
             }
             excel.Application.ActiveWorkbook.Save();
             excel.Application.Quit();
