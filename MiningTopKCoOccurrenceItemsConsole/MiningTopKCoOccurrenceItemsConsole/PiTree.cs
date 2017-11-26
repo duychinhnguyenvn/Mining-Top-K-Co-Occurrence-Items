@@ -74,6 +74,13 @@ namespace MiningTopKCoOccurrenceItemsConsole
         {
             return this.headerTable;
         }
+        public int getNodeCount() {
+            int result = 0;
+            foreach (var item in this.headerTable) {
+                result = result + item.Value.Count;
+            }
+            return result;
+        }
         private void showTree(PiTreeNode root)
         {
             if (root.getParentNode() != null)

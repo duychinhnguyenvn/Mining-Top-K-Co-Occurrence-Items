@@ -218,6 +218,7 @@ namespace MiningTopKCoOccurrenceItemsConsole
             Console.WriteLine("Original mem: {0}MB", memoryUsed / 1048576);
             watch.Stop();
             timeToBuildPiTree = watch.Elapsed.TotalMilliseconds;
+            Console.WriteLine("Total nodes: {0}",ptr.getNodeCount());
             watch = System.Diagnostics.Stopwatch.StartNew();
             Dictionary<string, List<PiTreeNode>> headerTable = ptr.getHeaderTable();
             Dictionary<string, int> CO_Items = ptr.getCoOccurrenceList();
